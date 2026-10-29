@@ -1,0 +1,36 @@
+[project]
+name = "missions-recap"
+version = "0.3.0"
+description = "Récapitulatif mensuel des jours par mission à partir d'un calendrier .ics (Thunderbird, etc.)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "Ton Nom", email = "toi@example.com" }]
+keywords = ["calendar", "ics", "thunderbird", "freelance", "missions", "tjm"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Natural Language :: French",
+    "Environment :: Console",
+    "Topic :: Office/Business :: Scheduling",
+]
+dependencies = [
+    "icalendar>=6.0",
+    "recurring-ical-events>=3.0",
+]
+
+[project.scripts]
+missions-recap = "missions_recap.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/TON_COMPTE/missions-recap"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/missions_recap"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
