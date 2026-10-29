@@ -65,7 +65,3 @@ uv run missions-recap mon.ics 2026
 uv build
 uv publish          # nécessite un token PyPI : UV_PUBLISH_TOKEN=pypi-...
 ```
-# missions_recap
-# missions_recap
-# missions_recap
-# missions_recap
